@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "styled-components";
+import {
+  Route,
+  Routes,
+  BrowserRouter as Router,
+  useNavigate,
+} from "react-router-dom";
 
-function App() {
+import Home from "./screens/Home";
+
+import routes from "./routes";
+import theme from "./theme";
+
+const App = () => {
+  const publicRoutes = [
+    <Route key="Home" exact path={routes.HOME} element={<Home />} />,
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes>{publicRoutes}</Routes>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
