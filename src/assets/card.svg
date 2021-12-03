@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.333" height="24" viewBox="0 0 29.333 24">
+  <g id="_004-credit-card" data-name="004-credit-card" transform="translate(-1.333 -4)">
+    <path id="Vector" d="M4,24H25.333a4,4,0,0,0,4-4V4a4,4,0,0,0-4-4H4A4,4,0,0,0,0,4V20a4,4,0,0,0,4,4ZM2.667,4A1.333,1.333,0,0,1,4,2.667H25.333A1.333,1.333,0,0,1,26.667,4V20a1.333,1.333,0,0,1-1.333,1.333H4A1.333,1.333,0,0,1,2.667,20Z" transform="translate(1.333 4)" fill="#999"/>
+    <path id="Vector-2" data-name="Vector" d="M1.333,2.667h4A1.333,1.333,0,0,0,5.333,0h-4a1.333,1.333,0,0,0,0,2.667Z" transform="translate(6.667 20)" fill="#999"/>
+    <path id="Vector-3" data-name="Vector" d="M1.333,2.667h8A1.333,1.333,0,0,0,9.333,0h-8a1.333,1.333,0,0,0,0,2.667Z" transform="translate(6.667 16)" fill="#999"/>
+  </g>
+</svg>

@@ -1,11 +1,23 @@
 const theme = {
   colors: {
-    white: "FDFDFD",
-    ligthGray: "#BBC8CE",
-    darkGreen: "#3B6443",
-    balck: "#1B1A1A",
-    mediumGreen: "#97A53C",
-    lightGreen: "#ABD4B1",
+    light: {
+      blue: "#007EFF",
+      lightBlue: "#007EFF",
+      background: "#F7F7FF",
+      mainFont: "#333333",
+      secondFont: "#999999",
+      red: "#F04343",
+      sideBar: "#FFFFFF",
+    },
+    dark: {
+      blue: "#007EFF",
+      lightBlue: "#007EFF",
+      background: "#1E1C2A",
+      mainFont: "#FFFFFF",
+      secondFont: "##999999",
+      red: "#F04343",
+      sideBar: "#252837",
+    },
   },
 };
 

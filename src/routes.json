@@ -1,3 +1,8 @@
 {
-  "HOME": "/"
+  "HOME": "/",
+  "BALANCE": "/payments",
+  "CARD": "/card",
+  "INVOICE": "/invoice",
+  "HISTORY": "/history",
+  "DETAILS": "/details"
 }
