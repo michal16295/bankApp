@@ -55,6 +55,7 @@ const Logo = styled.div`
   border-radius: 6px;
   line-height: 52px;
   color: white;
+  text-align: center;
 `;
 
 const Links = styled.div`

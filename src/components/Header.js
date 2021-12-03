@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaSearch, FaMail } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { FiMail, FiBell } from "react-icons/fi";
 
 const Header = () => {
