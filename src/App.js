@@ -4,6 +4,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import assets from "./assets";
 import screens from "./screens";
 import SideBar from "./components/SideBar";
+import Header from "./components/Header";
 import routes from "./routes.json";
 import theme from "./theme";
 
@@ -73,7 +74,8 @@ const App = () => {
       <Container>
         <Router>
           <SideBar actions={actions} />
-          <div>
+          <div style={{ padding: "40px", width: "100%" }}>
+            <Header />
             <Routes>{publicRoutes}</Routes>
           </div>
         </Router>

@@ -11,7 +11,7 @@ body {
   height: calc(var(--vh, 1vh) * 100);
   position: relative;
   scroll-behavior: smooth;
-  text-align: center;
+
   font-family: "Poppins";
 }
 #root {
