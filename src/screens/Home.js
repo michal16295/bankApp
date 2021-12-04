@@ -8,6 +8,7 @@ import TotalInvoice from "../components/Invoice/Total";
 import SentInvoice from "../components/Invoice/InvoiceSent";
 
 import LatestTransactions from "../components/Dashboard/LatestTransactions";
+import Earnings from "../components/Dashboard/Earnings";
 
 const Home = () => {
   return (
@@ -40,9 +41,7 @@ const Home = () => {
 
       <Row>
         <LatestTransactions />
-        <Col>
-          <div>Earnings Categories</div>
-        </Col>
+        <Earnings />
         <Col>
           <div>Friends List</div>
         </Col>
