@@ -74,7 +74,7 @@ const App = () => {
       <Container>
         <Router>
           <SideBar actions={actions} />
-          <div style={{ padding: "40px", width: "100%" }}>
+          <div style={{ padding: "40px", width: "100%", overflow: "auto" }}>
             <Header />
             <Routes>{publicRoutes}</Routes>
           </div>

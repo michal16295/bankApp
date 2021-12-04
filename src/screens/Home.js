@@ -4,6 +4,10 @@ import LatesActivity from "../components/Dashboard/Activity";
 import Card from "../components/Dashboard/Card";
 
 import InvoiceItem from "../components/Invoice/InvoiceItem";
+import TotalInvoice from "../components/Invoice/Total";
+import SentInvoice from "../components/Invoice/InvoiceSent";
+
+import LatestTransactions from "../components/Dashboard/LatestTransactions";
 
 const Home = () => {
   return (
@@ -16,40 +20,26 @@ const Home = () => {
       </Row>
 
       <Row>
-        <InvoiceItem
-          title="Total Invoice"
-          sum={520}
-          difference={12}
-          rising={true}
-          color="#73DC8A"
-        />
+        <TotalInvoice />
         <InvoiceItem
           title="Paid Invoice"
           sum={210}
           difference={12}
           rising={true}
-          color="#73DC8A"
+          color="#007EFF"
         />
         <InvoiceItem
           title="Unpaid Invoice"
           sum={65}
           difference={12}
-          rising={true}
-          color="#73DC8A"
+          rising={false}
+          color="#F04343"
         />
-        <InvoiceItem
-          title="Invoice sent"
-          sum={120}
-          difference={12}
-          rising={true}
-          color="#73DC8A"
-        />
+        <SentInvoice />
       </Row>
 
       <Row>
-        <Col>
-          <div>Latest Transaction</div>
-        </Col>
+        <LatestTransactions />
         <Col>
           <div>Earnings Categories</div>
         </Col>
@@ -76,7 +66,6 @@ const Title = styled.div`
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-
   column-gap: 15px;
   row-gap: 20px;
   margin: 40px 0;
