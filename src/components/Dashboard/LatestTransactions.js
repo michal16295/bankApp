@@ -2,38 +2,11 @@ import ItemContainer from "../ItemContainer";
 import { BsArrowDownRight, BsArrowUpRight } from "react-icons/bs";
 import styled from "styled-components";
 
-const data = [
-  {
-    difference: 45,
-    rise: true,
-    title: "Deposit Waste",
-    date: "2 March 2021",
-  },
-  {
-    difference: 45,
-    rise: false,
-    title: "Upgrade Storage Plan",
-    date: "2 March 2021",
-  },
-  {
-    difference: 50,
-    rise: true,
-    title: "Bank",
-    date: "2 March 2021",
-  },
-  {
-    difference: 100,
-    rise: false,
-    title: "H&M",
-    date: "2 March 2021",
-  },
-];
-
-const LatestTransactions = () => {
+const LatestTransactions = ({ title, data }) => {
   return (
     <ItemContainer>
       <div style={{ padding: "20px" }}>
-        <div>Latest Transactions</div>
+        <div>{title}</div>
         <div>
           {data.map((item) => {
             return (

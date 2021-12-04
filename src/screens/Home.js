@@ -11,6 +11,33 @@ import LatestTransactions from "../components/Dashboard/LatestTransactions";
 import Earnings from "../components/Dashboard/Earnings";
 import FriendsList from "../components/Dashboard/FriendsList";
 
+const data = [
+  {
+    difference: 45,
+    rise: true,
+    title: "Deposit Waste",
+    date: "2 March 2021",
+  },
+  {
+    difference: 45,
+    rise: false,
+    title: "Upgrade Storage Plan",
+    date: "2 March 2021",
+  },
+  {
+    difference: 50,
+    rise: true,
+    title: "Bank",
+    date: "2 March 2021",
+  },
+  {
+    difference: 100,
+    rise: false,
+    title: "H&M",
+    date: "2 March 2021",
+  },
+];
+
 const Home = () => {
   return (
     <Container>
@@ -41,7 +68,7 @@ const Home = () => {
       </Row>
 
       <Row>
-        <LatestTransactions />
+        <LatestTransactions title="Latest Transactions" data={data} />
         <Earnings />
         <FriendsList />
       </Row>
@@ -67,14 +94,4 @@ const Row = styled.div`
   column-gap: 15px;
   row-gap: 20px;
   margin: 40px 0;
-`;
-
-const Col = styled.div`
-  background-color: ${({ theme }) => theme.colors.light.sideBar};
-  border-radius: 24px;
-  padding: 20px;
-  flex: 1 1 40px;
-  font-weight: bold;
-  font-size: 22px;
-  color: ${({ theme }) => theme.colors.light.mainFont};
 `;
