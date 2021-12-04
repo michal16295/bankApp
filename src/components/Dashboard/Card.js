@@ -5,12 +5,15 @@ const Card = () => {
   return (
     <ItemContainer>
       <Container>
-        <div style={{ color: "white" }}>My Card</div>
+        <div>My Card</div>
         <Circle />
 
         <Content>
           <div>1234 **** **** ****</div>
-          <div style={{ fontSize: "16px" }}>Michal Barski</div>
+          <Flex>
+            <div>Michal Barski</div>
+            <div>05/26</div>
+          </Flex>
         </Content>
       </Container>
     </ItemContainer>
@@ -19,7 +22,7 @@ const Card = () => {
 
 export default Card;
 const Container = styled.div`
-  background-color: ${({ theme }) => theme.colors.light.blue};
+  background: linear-gradient(60deg, #007eff, #8fc2f5);
   height: 100%;
   border-radius: 24px;
   padding: 20px;
@@ -45,4 +48,11 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 17px;
+`;
+
+const Flex = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
 `;

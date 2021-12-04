@@ -3,6 +3,8 @@ import BalanceItem from "../components/Dashboard/Balance";
 import LatesActivity from "../components/Dashboard/Activity";
 import Card from "../components/Dashboard/Card";
 
+import InvoiceItem from "../components/Invoice/InvoiceItem";
+
 const Home = () => {
   return (
     <Container>
@@ -14,18 +16,34 @@ const Home = () => {
       </Row>
 
       <Row>
-        <Col>
-          <div>Total Invoice</div>
-        </Col>
-        <Col>
-          <div>Paid Invoice</div>
-        </Col>
-        <Col>
-          <div>Unpaid Invoice</div>
-        </Col>
-        <Col>
-          <div>Invoice sent</div>
-        </Col>
+        <InvoiceItem
+          title="Total Invoice"
+          sum={520}
+          difference={12}
+          rising={true}
+          color="#73DC8A"
+        />
+        <InvoiceItem
+          title="Paid Invoice"
+          sum={210}
+          difference={12}
+          rising={true}
+          color="#73DC8A"
+        />
+        <InvoiceItem
+          title="Unpaid Invoice"
+          sum={65}
+          difference={12}
+          rising={true}
+          color="#73DC8A"
+        />
+        <InvoiceItem
+          title="Invoice sent"
+          sum={120}
+          difference={12}
+          rising={true}
+          color="#73DC8A"
+        />
       </Row>
 
       <Row>
