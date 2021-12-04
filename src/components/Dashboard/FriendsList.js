@@ -1,31 +1,20 @@
 import ItemContainer from "../ItemContainer";
-import { AiOutlineDollarCircle } from "react-icons/ai";
+import { BiMessageDetail } from "react-icons/bi";
 import styled from "styled-components";
+import { FaSearch } from "react-icons/fa";
 
 const data = [
   {
-    difference: 44,
-    title: "Template Design",
-    subtitle: "$50 / from $1000",
-    date: "2 March 2021",
+    name: "Samantha William",
   },
   {
-    difference: 44,
-    title: "Wordpress",
-    subtitle: "$50 / from $1000",
-    date: "2 March 2021",
+    name: "Smith Werben",
   },
   {
-    difference: 44,
-    title: "Client Side",
-    subtitle: "$50 / from $1000",
-    date: "2 March 2021",
+    name: "Noah Arc",
   },
   {
-    difference: 44,
-    title: "Server",
-    subtitle: "$50 / from $1000",
-    date: "2 March 2021",
+    name: "Elizabeth March",
   },
 ];
 
@@ -34,19 +23,18 @@ const FriendsList = () => {
     <ItemContainer>
       <div style={{ padding: "20px" }}>
         <div>Friends List</div>
+        <SearchContainer>
+          <Input placeholder="Search..." />
+          <FaSearch />
+        </SearchContainer>
         {data.map((item) => {
           return (
             <MainFlex>
               <InnerFlex>
-                <Box>
-                  <AiOutlineDollarCircle size={30} color="#007EFF" />
-                </Box>
-                <div>
-                  <Title>{item.title}</Title>
-                  <SubTitle>{item.subtitle}</SubTitle>
-                </div>
+                <Avatar />
+                <Title>{item.name}</Title>
               </InnerFlex>
-              <Sum>${item.difference}</Sum>
+              <BiMessageDetail color="#007EFF" size={30} />
             </MainFlex>
           );
         })}
@@ -63,20 +51,17 @@ const MainFlex = styled.div`
   margin-top: 20px;
 `;
 
-const Box = styled.div`
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: rgba(0, 126, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const Avatar = styled.div`
+  background-color: #dddddd;
+  height: 42px;
+  width: 40px;
+  border-radius: 16px;
 `;
 
 const InnerFlex = styled.div`
   display: flex;
   align-items: center;
-  column-gap: 15px;
+  column-gap: 20px;
 `;
 
 const Title = styled.div`
@@ -84,19 +69,19 @@ const Title = styled.div`
   color: ${({ theme }) => theme.colors.light.mainFont};
 `;
 
-const SubTitle = styled.div`
-  font-size: 14px;
-  color: ${({ theme }) => theme.colors.light.secondFont};
-  font-weight: 400;
+const SearchContainer = styled.div`
+  height: 20px;
+  background: #f0f5fa;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-top: 20px;
 `;
 
-const Sum = styled.div`
-  height: 40px;
-  width: 70px;
-  border-radius: 12px;
-  font-size: 16px;
-  color: ${({ theme }) => theme.colors.light.blue};
-  background: rgba(0, 126, 255, 0.1);
-  text-align: center;
-  line-height: 40px;
+const Input = styled.input`
+  outline: none;
+  background-color: transparent;
+  border: none;
+  flex: 1;
 `;

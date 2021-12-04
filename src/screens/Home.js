@@ -9,6 +9,7 @@ import SentInvoice from "../components/Invoice/InvoiceSent";
 
 import LatestTransactions from "../components/Dashboard/LatestTransactions";
 import Earnings from "../components/Dashboard/Earnings";
+import FriendsList from "../components/Dashboard/FriendsList";
 
 const Home = () => {
   return (
@@ -42,9 +43,7 @@ const Home = () => {
       <Row>
         <LatestTransactions />
         <Earnings />
-        <Col>
-          <div>Friends List</div>
-        </Col>
+        <FriendsList />
       </Row>
     </Container>
   );
