@@ -30,6 +30,59 @@ const data = [
   },
 ];
 
+const TransactionsCols = ["transaction", "date", "total"];
+const TransactionData = [
+  {
+    id: "1",
+    transaction: "Shopping",
+    date: "28/02",
+    total: 300,
+  },
+  {
+    id: "2",
+    transaction: "Grocery",
+    date: "21/02",
+    total: 45,
+  },
+  {
+    id: "3",
+    transaction: "Car Repair",
+    date: "15/02",
+    total: 200,
+  },
+];
+
+const InvoiceCols = ["invoice", "recipient", "status", "date"];
+const InvoiceData = [
+  {
+    id: "1",
+    invoice: "INV-001",
+    recipient: "Samanta",
+    status: "Paid",
+    date: "28/02",
+  },
+  {
+    id: "2",
+    invoice: "INV-002",
+    recipient: "Tony",
+    status: "Paid",
+    date: "28/02",
+  },
+  {
+    id: "3",
+    invoice: "INV-003",
+    recipient: "Johnny",
+    status: "Paid",
+    date: "28/02",
+  },
+  {
+    id: "4",
+    invoice: "INV-004",
+    recipient: "Karen",
+    status: "Paid",
+    date: "28/02",
+  },
+];
 const Balance = () => {
   return (
     <Container>
@@ -41,8 +94,12 @@ const Balance = () => {
           <LatestTransactions title="Transfer History" data={data} />
         </Col>
         <Col>
-          <Table title="Latest Transactions" />
-          <Table title="Latest Invoice" />
+          <Table
+            title="Latest Transactions"
+            cols={TransactionsCols}
+            data={TransactionData}
+          />
+          <Table title="Latest Invoice" cols={InvoiceCols} data={InvoiceData} />
         </Col>
         <Col>
           <Transfer />
@@ -73,7 +130,6 @@ const Flex = styled.div`
 const Col = styled.div`
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 30px;
   margin: 40px 0;
