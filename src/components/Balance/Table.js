@@ -5,17 +5,17 @@ import styled from "styled-components";
 const Table = ({ title, data, cols }) => {
   return (
     <ItemContainer>
-      <div style={{ padding: "20px" }}>
-        <div>{title}</div>
+      <div style={{ padding: "20px 0" }}>
+        <div style={{ padding: "20px 0 0 20px" }}>{title}</div>
         <Row>
           <CheckBox />
           {cols.map((col) => {
             return <ColItem>{col}</ColItem>;
           })}
         </Row>
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <Row>
+            <Row last={index === data.length - 1}>
               <CheckBox />
               {cols.map((col) => {
                 return <ColItem>{item[col]}</ColItem>;
@@ -42,6 +42,8 @@ const Row = styled.div`
   display: flex;
   column-gap: 20px;
   align-items: center;
+  border-bottom: ${({ last }) => !last && "1px solid #dddddd"};
+  padding: 20px;
 `;
 
 const ColItem = styled.div`
@@ -52,5 +54,5 @@ const ColItem = styled.div`
   text-transform: capitalize;
   display: flex;
   flex-direction: column;
-  min-width: 70px;
+  min-width: 75px;
 `;
