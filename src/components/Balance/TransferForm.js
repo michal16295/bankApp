@@ -1,6 +1,6 @@
 import ItemContainer from "../ItemContainer";
-import { BsArrowDownRight, BsArrowUpRight } from "react-icons/bs";
 import styled from "styled-components";
+import Button from "../../components/Form/Button";
 
 const TransferForm = () => {
   return (
@@ -20,7 +20,7 @@ const TransferForm = () => {
           <InputContainer>
             <Input placeholder="****" />
           </InputContainer>
-          <Button>Transfer</Button>
+          <Button title="transfer" />
         </Flex>
       </div>
     </ItemContainer>
@@ -51,17 +51,4 @@ const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
   column-gap: 5px;
-`;
-
-const Button = styled.button`
-  border: none;
-  background: ${({ theme }) => theme.colors.light.blue};
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 5px;
-  flex: 1;
-  height: 50px;
-  margin-top: 5px;
-  cursor: pointer;
 `;
