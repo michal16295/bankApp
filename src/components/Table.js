@@ -7,7 +7,7 @@ const Table = ({ title, data, cols }) => {
   const [checkedObj, setCheckedObj] = useState({});
 
   return (
-    <ItemContainer>
+    <ItemContainer flex="2 1 300px">
       <div style={{ padding: "20px 0" }}>
         <div style={{ padding: "20px 0 20px 20px" }}>{title}</div>
         <Row>

@@ -30,16 +30,6 @@ const App = () => {
       route: routes.CARD,
       icon: assets.cardIcon,
     },
-    {
-      title: "History",
-      route: routes.HISTORY,
-      icon: assets.historyIcon,
-    },
-    {
-      title: "Details",
-      route: routes.DETAILS,
-      icon: assets.detailIcon,
-    },
   ];
   const publicRoutes = [
     <Route key="Home" exact path={routes.HOME} element={<screens.Home />} />,
@@ -56,18 +46,6 @@ const App = () => {
       element={<screens.Invoice />}
     />,
     <Route key="Card" exact path={routes.CARD} element={<screens.Card />} />,
-    <Route
-      key="History"
-      exact
-      path={routes.HISTORY}
-      element={<screens.History />}
-    />,
-    <Route
-      key="Details"
-      exact
-      path={routes.DETAILS}
-      element={<screens.Details />}
-    />,
   ];
   return (
     <ThemeProvider theme={theme}>

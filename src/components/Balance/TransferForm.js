@@ -1,25 +1,19 @@
 import ItemContainer from "../ItemContainer";
 import styled from "styled-components";
+
 import Button from "../../components/Form/Button";
+import Input from "../../components/Form/Input";
 
 const TransferForm = () => {
   return (
     <ItemContainer>
       <div style={{ padding: "20px" }}>
         <div style={{ marginBottom: "20px" }}>Transfer</div>
-        <Label>Transfer to</Label>
-        <InputContainer>
-          <Input placeholder="email@email.com" />
-        </InputContainer>
-        <Label>Amount</Label>
-        <InputContainer>
-          <Input placeholder="0.00$" />
-        </InputContainer>
-        <Label>Pin</Label>
+        <Input title="Transfer to" placeholder="email@email.com" />
+        <Input title="Amount" placeholder="0.00$" />
+
         <Flex>
-          <InputContainer>
-            <Input placeholder="****" />
-          </InputContainer>
+          <Input title="Pin" placeholder="****" />
           <Button title="transfer" />
         </Flex>
       </div>
@@ -28,24 +22,6 @@ const TransferForm = () => {
 };
 
 export default TransferForm;
-
-const Label = styled.div`
-  font-size: 16px;
-  font-weight: 400;
-`;
-
-const InputContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.light.background};
-  padding: 10px 15px;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-`;
-const Input = styled.input`
-  border: none;
-  outline: none;
-  background: transparent;
-`;
 
 const Flex = styled.div`
   display: flex;
