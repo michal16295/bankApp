@@ -4,7 +4,7 @@ import Card from "../components/Dashboard/Card";
 import LatestTransactions from "../components/Dashboard/LatestTransactions";
 import EarningsSources from "../components/Balance/EarningSource";
 
-import Table from "../components/Balance/Table";
+import Table from "../components/Table";
 
 import Transfer from "../components/Balance/TransferForm";
 import SendInvoice from "../components/Balance/SendIvoicForm";
@@ -30,7 +30,20 @@ const data = [
   },
 ];
 
-const TransactionsCols = ["transaction", "date", "total"];
+const TransactionsCols = [
+  {
+    title: "transaction",
+    color: "mainFont",
+  },
+  {
+    title: "date",
+    color: "secondFont",
+  },
+  {
+    title: "total",
+    color: "blue",
+  },
+];
 const TransactionData = [
   {
     id: "1",
@@ -52,7 +65,24 @@ const TransactionData = [
   },
 ];
 
-const InvoiceCols = ["invoice", "recipient", "status", "date"];
+const InvoiceCols = [
+  {
+    title: "invoice",
+    color: "mainFont",
+  },
+  {
+    title: "recipient",
+    color: "secondFont",
+  },
+  {
+    title: "status",
+    color: "blue",
+  },
+  {
+    title: "date",
+    color: "secondFont",
+  },
+];
 const InvoiceData = [
   {
     id: "1",

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Card = () => {
   return (
-    <ItemContainer>
+    <ItemContainer >
       <Container>
         <div>My Card</div>
         <Circle />
